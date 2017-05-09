@@ -1,5 +1,6 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+import PropTypes from 'prop-types';
 import { Session } from 'meteor/session';
 import { Meteor } from 'meteor/meteor';
 import { browserHistory } from 'react-router';
@@ -76,16 +77,16 @@ export class Editor extends React.Component {
 }
 
 Editor.propTypes = {
-  selectedNoteId: React.PropTypes.string,
-  note: React.PropTypes.shape({
-    _id: React.PropTypes.string,
-    title: React.PropTypes.string,
-    body: React.PropTypes.string,
-    userId: React.PropTypes.string,
-    updatedAt: React.PropTypes.number
+  selectedNoteId: PropTypes.string,
+  note: PropTypes.shape({
+    _id: PropTypes.string,
+    title: PropTypes.string,
+    body: PropTypes.string,
+    userId: PropTypes.string,
+    updatedAt: PropTypes.number
   }),
-  call: React.PropTypes.func.isRequired,
-  browserHistory: React.PropTypes.object.isRequired
+  call: PropTypes.func.isRequired,
+  browserHistory: PropTypes.object.isRequired
 };
 
 export default createContainer(() => {

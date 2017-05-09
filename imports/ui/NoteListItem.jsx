@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Session } from 'meteor/session';
+import PropTypes from 'prop-types';
 import { createContainer } from 'meteor/react-meteor-data';
 
 export const NoteListItem = (props) => {
@@ -16,12 +17,12 @@ export const NoteListItem = (props) => {
 };
 
 NoteListItem.propTypes = {
-  Session: React.PropTypes.object.isRequired,
-  note: React.PropTypes.shape({
-    _id: React.PropTypes.string,
-    title: React.PropTypes.string,
-    updatedAt: React.PropTypes.number,
-    selected: React.PropTypes.bool
+  Session: PropTypes.object.isRequired,
+  note: PropTypes.shape({
+    _id: PropTypes.string,
+    title: PropTypes.string,
+    updatedAt: PropTypes.number,
+    selected: PropTypes.bool
   }).isRequired
 };
 

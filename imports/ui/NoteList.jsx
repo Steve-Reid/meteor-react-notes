@@ -1,5 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
+import PropTypes from 'prop-types';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Session } from 'meteor/session';
 
@@ -28,7 +29,7 @@ export const NoteList = (props) => {
 };
 
 NoteList.propTypes = {
-  notes: React.PropTypes.arrayOf(React.PropTypes.object).isRequired // deprecated
+  notes: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default createContainer(() => {
