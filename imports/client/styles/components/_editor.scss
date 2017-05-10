@@ -5,6 +5,10 @@
   flex-direction: column;
   padding: $large-space;
   width: 100%;
+
+  @include short-screen {
+    padding: $space / 2 $large-space;
+  }
 }
 
 .editor__title {
@@ -14,6 +18,10 @@
   margin-bottom: $large-space;
   outline: none;
   padding: $input-spacing;
+
+  @include short-screen {
+    margin-bottom: $space;
+  }
 }
 
 .editor__body {
@@ -24,6 +32,11 @@
   padding: $input-spacing;
   resize: none;
   -webkit-overflow-scrolling: touch;
+
+  @include short-screen {
+    margin-bottom: $space;
+    border-radius: 0;
+  }
 }
 
 .editor__message {
